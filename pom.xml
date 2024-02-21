@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ezeep</groupId>
+  <artifactId>chrome-ext</artifactId>
+  <version>1.0.1</version>
+  <packaging>pom</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <appendAssemblyId>false</appendAssemblyId>
+          <descriptors>
+            <descriptor>assemblies.xml</descriptor>
+          </descriptors>
+          <outputDirectory>maven-release</outputDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <id>CreateFinalZipPackage</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <!-- mvn deploy -->
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <name>releases</name>
+      <url>https://ctd-sv01.thinprint.de:440/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
+</project>

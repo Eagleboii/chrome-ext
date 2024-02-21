@@ -1,0 +1,19 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './frame.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-frame {
+  background: var(--ezp-color-surface-tertiary);
+  display: none;
+  width: 320px;
+}

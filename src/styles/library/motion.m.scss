@@ -1,0 +1,28 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use 'sass:string';
+
+/**
+ *
+ * Variables
+ *
+ */
+
+$easings: (
+  'in-cubic': '0.32, 0, 0.67, 0',
+  'out-cubic': '0.33, 1, 0.68, 1',
+);
+
+/**
+ *
+ * Mixins
+ *
+ */
+
+@mixin declareEasing($name, $value) {
+  --ezp-motion-easing-#{$name}: #{string.unquote($value)};
+}

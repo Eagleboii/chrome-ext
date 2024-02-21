@@ -1,0 +1,319 @@
+{
+    "appName": {
+
+        "message": "My App",
+        "description": "The title of the application, displayed in the web store."
+
+    },
+
+    "appDesc": {
+
+        "message": "This app does something awesome.",
+        "description": "The description of the application, displayed in the web store."
+
+    },
+
+    "login": {
+
+        "message": "Willkommen bei ezeep Blue"
+
+    },
+
+    "logout": {
+
+        "message": "Abmelden"
+
+    },
+
+    "user_portal": {
+
+        "message": "User Portal"
+
+    },
+
+
+    "loggedin_username": {
+
+        "message": "Angemeldet als:"
+
+    },
+
+    "loggedin_credit": {
+
+        "message": "Guthaben:"
+
+    },
+
+    "loggedin_license": {
+
+        "message": "Lizenz:"
+
+    },
+
+    "username_text": {
+
+        "message": "E-Mail-Adresse"
+
+    },
+
+    "password_text": {
+
+        "message": "Passwort"
+
+    },
+
+    "ezeep_notification": {
+
+        "message": "Anmelden bei ezeep"
+
+    },
+
+    "login_credentials_text": {
+
+        "message": "Anmelde-Informationen"
+
+    },
+
+    "account_details_text": {
+
+        "message": "Account-Informationen"
+
+    },
+
+    "manage_profiles_text": {
+
+        "message": "Profile verwalten"
+
+    },
+
+    "add_profile_text": {
+
+        "message": "Profil hinzufügen:"
+
+    },
+
+    "use_profiles_text": {
+
+        "message": "Profile benutzen"
+
+    },
+
+    "userid_td_text": {
+
+        "message": "Benutzer-ID"
+
+    },
+
+    "username_td_text": {
+
+        "message": "Benutzername"
+
+    },
+
+    "license_valid_td_text": {
+
+        "message": "Lizenz"
+
+    },
+
+    "license_left_td_text": {
+
+        "message": "Lizent läuft ab in "
+
+    },
+
+    "license_trial_td_text": {
+
+        "message": "Lizenztyp"
+
+    },
+
+    "value_valid": {
+
+        "message": "gültig"
+
+    },
+
+    "value_invalid": {
+
+        "message": "ungültig"
+
+    },
+
+    "license_trial": {
+
+        "message": "Testlizenz"
+
+    },
+
+    "license_full": {
+
+        "message": "Volllizenz"
+
+    },
+
+    "forgot_password_text": {
+
+        "message": "Passwort vergessen?"
+
+    },
+
+    "notification_title_error_general": {
+
+        "message": "Fehler"
+
+    },
+
+    "notification_message_error_login": {
+
+        "message": "Inkorrekte Anmeldeinformationen"
+
+    },
+
+    "notification_title_loggedin": {
+
+        "message": "Angemeldet"
+
+    },
+
+    "notification_message_loggedin": {
+
+        "message": "Anmeldung erfolgreich."
+
+    },
+
+    "notification_title_loggedout": {
+
+        "message": "Abgemeldet"
+
+    },
+
+    "notification_message_loggedout": {
+
+        "message": "Abmeldung erfolgreich."
+
+    },
+
+    "notification_message_general_error": {
+
+        "message": "Es trat ein Fehler auf."
+
+    },
+
+    "notification_title_general_error": {
+
+        "message": "Fehler"
+
+    },
+
+    "notification_message_not_enough_amount": {
+
+        "message": "Nicht genug Guthaben"
+
+    },
+
+    "notification_title_not_enough_amount": {
+
+        "message": "Guthaben zu gering"
+
+    },
+
+    "notification_title_no_printers_found": {
+
+        "message": "Keine Drucker gefunden"
+
+    },
+
+    "notification_message_no_printers_found": {
+
+        "message": "Wir konnten keine Drucker finden, sind sie eingeschaltet?"
+
+    },
+
+    "notification_title_no_printer_properties_found": {
+
+        "message": "No Printers found."
+    
+      },
+    
+    "notification_message_no_printer_properties_found": {
+
+        "message": "Wir konnten keine Drucker finden, sind sie eingeschaltet?"
+
+    },
+
+    "notification_title_invalid_license": {
+
+        "message": "Ungültige Lizenz"
+
+    },
+
+    "notification_message_invalid_license": {
+
+        "message": "Deine Lizenz ist nicht gültig. Im Moment kannst du nicht drucken."
+
+    },
+
+    "notification_message_job_sent": {
+
+        "message": "Auftrag an den Drucker gesendet."
+
+    },
+
+    "notification_title_job_sent": {
+
+        "message": "Auftrag gesendet."
+
+    },
+
+    "notification_message_quota_exceeded": {
+
+        "message": "Ihr Guthaben ist aufgebraucht."
+
+    },
+
+    "notification_title_quota_exceeded": {
+
+        "message": "Guthaben aufgebraucht"
+
+    },
+
+    "text_printer_list_name": {
+
+        "message": "Name"
+
+    },
+
+    "text_printer_list_scheme": {
+
+        "message": "Schema"
+
+    },
+
+    "text_printer_list_price": {
+
+        "message": "Preis"
+
+    },
+
+    "text_printer_list_quota": {
+
+        "message": "Quota"
+
+    },
+
+    "text_printer_list_myprinters": {
+
+        "message": "Meine Drucker"
+
+    },
+
+    "no_printers": {
+
+        "message": "Derzeit sind Drucker verfügbar."
+
+    }
+
+
+
+}

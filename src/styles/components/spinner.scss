@@ -1,0 +1,53 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './spinner.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-spinner {
+  --ezp-spinner-animation-duration: 1s;
+  --ezp-spinner-size: 20px;
+
+  animation: ezp-spinner var(--ezp-spinner-animation-duration) linear infinite;
+  display: block;
+  height: var(--ezp-spinner-size);
+  transform: rotate(0);
+  width: var(--ezp-spinner-size);
+}
+
+.ezp-spinner__track {
+  animation: ezp-spinner-track var(--ezp-spinner-animation-duration) linear
+    alternate infinite;
+  fill: none;
+  stroke: var(--ezp-spinner-track-stroke, currentColor);
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  stroke-linecap: round;
+  stroke-width: 2px;
+}
+
+/**
+ *
+ * Keyframes
+ *
+ */
+
+@keyframes ezp-spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ezp-spinner-track {
+  100% {
+    stroke-dashoffset: 25;
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>icon-bw</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icons-20px" sketch:type="MSArtboardGroup" transform="translate(-159.000000, 0.000000)">
+            <g id="icon-bw" sketch:type="MSLayerGroup" transform="translate(162.000000, 4.000000)">
+                <ellipse id="Oval-2" fill="#B3B3B3" sketch:type="MSShapeGroup" cx="9" cy="6" rx="3" ry="5"></ellipse>
+                <path d="M11.4087355,6 C11.4087355,8.02185002 10.4570446,9.80863148 9.00020635,10.8956336 C9.93126218,11.5904207 11.0678436,12 12.2960449,12 C15.4459934,12 18,9.31396737 18,6 C18,2.68624968 15.4459934,0 12.2958386,0 C11.0676373,0 9.93105583,0.409579279 9,1.10436639 C10.4568382,2.19136852 11.4087355,3.97814998 11.4087355,6 L11.4087355,6 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                <path d="M6.59162196,6 C6.59162196,3.97814998 7.54333471,2.19136852 9,1.10436639 C8.06912918,0.409579279 6.93252167,0 5.7042922,0 C2.55406521,0 0,2.68624968 0,6 C0,9.31396737 2.55406521,12 5.7042922,12 C6.93252167,12 8.06912918,11.5904207 9,10.8956336 C7.54333471,9.80863148 6.59162196,8.02185002 6.59162196,6 L6.59162196,6 Z" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

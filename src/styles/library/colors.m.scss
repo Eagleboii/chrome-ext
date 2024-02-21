@@ -1,0 +1,123 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use 'sass:color';
+@use 'sass:math';
+
+/**
+ *
+ * Variables
+ *
+ */
+
+$levels: (
+  'light': (
+    'main': (
+      'primary': rgb(31 144 178),
+      'secondary': rgb(48 154 189),
+      'tertiary': rgb(1 133 167),
+    ),
+    'accent': (
+      'primary': rgb(207 65 96),
+      'secondary': rgb(219 77 106),
+      'tertiary': rgb(195 53 87),
+    ),
+    'on-main': (
+      'primary': rgb(255 255 255),
+    ),
+    'on-accent': (
+      'primary': rgb(255 255 255),
+    ),
+    'surface': (
+      'primary': rgb(255 255 255),
+      'secondary': rgb(243 243 243),
+      'tertiary': rgb(255 255 255),
+    ),
+    'shade': (
+      'primary': rgba(119 119 119 / 10%),
+      'secondary': rgba(119 119 119 / 16%),
+      'tertiary': rgba(119 119 119 / 22%),
+    ),
+    'foreground': (
+      'primary': rgba(0 0 0 / 94%),
+      'secondary': rgba(99 99 99 / 90%),
+      'tertiary': rgba(99 99 99 / 58%),
+    ),
+    'outline': (
+      'primary': rgba(119 119 119 / 16%),
+      'secondary': rgba(119 119 119 / 26%),
+    ),
+    'overlay': (
+      'primary': rgba(0 0 0 / 16%),
+      'secondary': rgba(0 0 0 / 26%),
+      'tertiary': rgba(0 0 0 / 42%),
+    ),
+    'green': (
+      'primary': rgb(34 163 137),
+    ),
+    'red': (
+      'primary': rgba(232 73 46),
+    ),
+  ),
+  'dark': (
+    'main': (
+      'primary': rgb(48 154 189),
+      'secondary': rgb(63 165 200),
+      'tertiary': rgb(31 144 178),
+    ),
+    'accent': (
+      'primary': rgb(219 77 106),
+      'secondary': rgb(232 88 116),
+      'tertiary': rgb(207 65 96),
+    ),
+    'on-main': (
+      'primary': rgb(0 0 0),
+    ),
+    'on-accent': (
+      'primary': rgb(0 0 0),
+    ),
+    'surface': (
+      'primary': rgb(0 0 0),
+      'secondary': rgb(27 27 27),
+      'tertiary': rgb(40 40 40),
+    ),
+    'shade': (
+      'primary': rgba(119 119 119 / 28%),
+      'secondary': rgba(119 119 119 / 34%),
+      'tertiary': rgba(119 119 119 / 40%),
+    ),
+    'foreground': (
+      'primary': rgba(255 255 255 / 94%),
+      'secondary': rgba(139 139 139 / 90%),
+      'tertiary': rgba(139 139 139 / 58%),
+    ),
+    'outline': (
+      'secondary': rgba(119 119 119 / 26%),
+      'tertiary': rgba(119 119 119 / 32%),
+    ),
+    'overlay': (
+      'primary': rgba(0 0 0 / 26%),
+      'secondary': rgba(0 0 0 / 42%),
+      'tertiary': rgba(0 0 0 / 68%),
+    ),
+    'green': (
+      'primary': rgb(34 163 137),
+    ),
+    'red': (
+      'primary': rgba(232 73 46),
+    ),
+  ),
+);
+
+/**
+ *
+ * Mixins
+ *
+ */
+
+@mixin declareSwatch($name, $level, $color) {
+  --ezp-color-#{$name}-#{$level}: #{$color};
+}

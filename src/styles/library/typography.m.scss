@@ -1,0 +1,27 @@
+/**
+ *
+ * Mixins
+ *
+ */
+
+@mixin trim($name) {
+  & {
+    padding-bottom: 1px;
+    padding-top: 1px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+  }
+
+  &:before {
+    margin-top: calc((var(--ezp-#{$name}-offset) + 1px) * -1);
+  }
+
+  &:after {
+    margin-bottom: calc((var(--ezp-#{$name}-offset) + 1px) * -1);
+  }
+}

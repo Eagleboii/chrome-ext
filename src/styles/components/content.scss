@@ -1,0 +1,31 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './content.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-content {
+  &__cover {
+    display: grid;
+    gap: var(--ezp-layout-spacing-4);
+    justify-items: center;
+    padding: var(--ezp-layout-spacing-6) var(--ezp-layout-spacing-4);
+    text-align: center;
+  }
+
+  &__title {
+    color: var(--ezp-color-foreground-primary);
+  }
+
+  &__description {
+    color: var(--ezp-color-foreground-secondary);
+  }
+}

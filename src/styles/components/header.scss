@@ -1,0 +1,48 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './header.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-header {
+  align-items: center;
+  box-shadow: 0 1px 0 0 var(--ezp-color-outline-primary);
+  display: grid;
+  grid-gap: 8px;
+  grid-template: var(--ezp-header-grid-template, auto / repeat(2, auto) 1fr);
+  justify-content: start;
+  padding: 0 16px;
+
+  &--logged-out {
+    --ezp-header-grid-template: auto / repeat(2, auto);
+  }
+
+  &__logo {
+    --ezp-header-logo-size: 24px;
+    display: block;
+    height: var(--ezp-header-logo-size);
+
+    margin: 0;
+    width: var(--ezp-header-logo-size);
+  }
+
+  &__title {
+    color: var(--ezp-color-main-primary);
+    padding: var(--ezp-layout-spacing-4) 0;
+  }
+
+  &__links {
+    display: flex;
+    gap: var(--ezp-layout-spacing-4);
+    justify-self: end;
+    padding: 1px 0 0; // FIXME
+  }
+}

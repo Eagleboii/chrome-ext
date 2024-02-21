@@ -1,0 +1,22 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './label.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-icon {
+  --ezp-icon-size: 20px;
+
+  display: block;
+  fill: var(--ezp-icon-fill, currentColor);
+  height: var(--ezp-icon-size);
+  width: var(--ezp-icon-size);
+}

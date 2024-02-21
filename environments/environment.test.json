@@ -1,0 +1,8 @@
+{
+    "api_url": "https://printapi.tst.azdev.ezeep.com/",
+    "print_service_url": "https://api2.tst.azdev.ezeep.com/printing/",
+    "account_url": "https://account.tst.azdev.ezeep.com/",
+    "client_id": "jgrbBryBroVnVYWofctcnfHlvytwprPhCTAUBIWZ",
+    "portal_url": "https://app.tst.azdev.ezeep.com"
+}
+

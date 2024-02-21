@@ -1,0 +1,53 @@
+/**
+ *
+ * Library
+ *
+ */
+
+@import './library/colors';
+@import './library/fonts';
+@import './library/layout';
+@import './library/media';
+@import './library/motion';
+@import './library/typography';
+
+/**
+ *
+ * Components
+ *
+ */
+
+@import './components/content';
+@import './components/footer';
+@import './components/frame';
+@import './components/glyphs';
+@import './components/header';
+@import './components/heading';
+@import './components/icon';
+@import './components/label';
+@import './components/list-item';
+@import './components/progress';
+@import './components/spinner';
+@import './components/text-button';
+@import './components/text-link';
+
+/**
+ *
+ * Rules
+ *
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: 'calt', 'liga', 'case', 'ss03', 'zero', 'cv05';
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none;
+}

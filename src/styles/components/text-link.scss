@@ -1,0 +1,38 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './../library/media.m' as media;
+@use './text-link.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-text-link {
+  color: var(--ezp-text-link-color);
+  opacity: var(--ezp-text-link-opacity, 1);
+  text-decoration: var(--ezp-text-link-text-decoration, none);
+
+  &--main {
+    --ezp-text-link-color: var(--ezp-color-main-primary);
+  }
+
+  &--accent {
+    --ezp-text-link-color: var(--ezp-color-accent-primary);
+  }
+
+  @include media.hover {
+    &:hover {
+      --ezp-text-link-text-decoration: underline;
+    }
+
+    &:active {
+      --ezp-text-link-opacity: 0.7;
+    }
+  }
+}

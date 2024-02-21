@@ -1,0 +1,19 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './motion.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+:root {
+  @each $name, $value in self.$easings {
+    @include self.declareEasing($name, $value);
+  }
+}

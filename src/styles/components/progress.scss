@@ -1,0 +1,113 @@
+/**
+ *
+ * TODO
+ *
+ * - animate gradient color stops
+ *
+ */
+
+/**
+ *
+ * Modules
+ *
+ */
+
+@use 'sass:map';
+@use 'sass:string';
+@use 'sass:color';
+@use 'sass:list';
+@use './../library/media.m' as media;
+@use './progress.m' as self;
+
+/**
+ *
+ * Variables
+ *
+ */
+
+$background: ();
+$backgroundTrack: ();
+
+@each $color in self.$colors {
+  $background: list.append(
+    $background,
+    color.change($color, $alpha: 0.2),
+    $separator: comma
+  );
+  $backgroundTrack: list.append($backgroundTrack, $color, $separator: comma);
+}
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-progress {
+  --ezp-progress-height: 8px;
+  --ezp-progress-inner-height: 6px;
+  --ezp-progress-box-shadow-color: #{color.change(black, $alpha: 0.02)};
+  --ezp-progress-track-box-shadow-color: #{color.change(black, $alpha: 0.06)};
+
+  background: linear-gradient(90deg, $background);
+  border-radius: calc(var(--ezp-progress-height) / 2);
+  box-shadow: inset 0 0 0 1px var(--ezp-progress-box-shadow-color);
+  height: var(--ezp-progress-height);
+  padding: calc(
+    (var(--ezp-progress-height) - var(--ezp-progress-inner-height)) / 2
+  );
+
+  &__inner {
+    border-radius: calc(var(--ezp-progress-inner-height) / 2);
+    height: var(--ezp-progress-inner-height);
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__track {
+    animation: ezp-progress-track 1.6s ease infinite;
+    background: linear-gradient(90deg, $backgroundTrack);
+    border-radius: calc(var(--ezp-progress-inner-height) / 2);
+    box-shadow: inset 0 0 0 1px var(--ezp-progress-track-box-shadow-color);
+    height: var(--ezp-progress-inner-height);
+    position: absolute;
+    top: 0;
+  }
+
+  @include media.dark {
+    --ezp-progress-box-shadow-color: #{color.change(white, $alpha: 0.06)};
+    --ezp-progress-track-box-shadow-color: #{color.change(white, $alpha: 0.16)};
+  }
+}
+
+/**
+ *
+ * Keyframes
+ *
+ */
+
+@keyframes ezp-progress-track {
+  0% {
+    animation-timing-function: cubic-bezier(
+      string.unquote(map.get(self.$easings, 'in-cubic'))
+    );
+    left: 0;
+    right: calc(100% - var(--ezp-progress-inner-height));
+    transform: translateX(calc(var(--ezp-progress-inner-height) * -1));
+  }
+
+  50% {
+    animation-timing-function: cubic-bezier(
+      string.unquote(map.get(self.$easings, 'out-cubic'))
+    );
+    left: 0;
+    right: 50%;
+    transform: translateX(0);
+  }
+
+  100% {
+    left: calc(100% - var(--ezp-progress-inner-height));
+    right: 0;
+    transform: translateX(var(--ezp-progress-inner-height));
+  }
+}

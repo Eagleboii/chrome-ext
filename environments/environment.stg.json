@@ -1,0 +1,8 @@
+{
+    "api_url": "https://printapi.stg.azdev.ezeep.com/",
+    "print_service_url": "http://api2.stg.azdev.ezeep.com/printing/",
+    "account_url": "https://account.stg.azdev.ezeep.com/",
+    "client_id": "1cJvgeTtwaHk4CndEBBY8TXRSufjDrLr3sShXjZk",
+    "portal_url": "https://app.stg.azdev.ezeep.com"
+}
+

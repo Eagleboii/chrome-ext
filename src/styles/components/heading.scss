@@ -1,0 +1,51 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './../library/typography.m' as typography;
+@use './heading.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-heading {
+  display: block;
+  font-size: var(--ezp-heading-font-size);
+  font-weight: var(--ezp-heading-font-weight);
+  letter-spacing: var(--ezp-heading-letter-spacing);
+  line-height: var(--ezp-heading-line-height);
+  margin: 0;
+
+  &--primary {
+    --ezp-heading-font-size: 18px;
+    --ezp-heading-line-height: 26px;
+    --ezp-heading-letter-spacing: -0.014em;
+    --ezp-heading-offset: 6px;
+  }
+
+  &--secondary {
+    --ezp-heading-font-size: 16px;
+    --ezp-heading-line-height: 24px;
+    --ezp-heading-letter-spacing: -0.011em;
+    --ezp-heading-offset: 6px;
+  }
+
+  &--soft {
+    --ezp-heading-font-weight: 400;
+  }
+
+  &--strong {
+    --ezp-heading-font-weight: 500;
+  }
+
+  &--heavy {
+    --ezp-heading-font-weight: 600;
+  }
+
+  @include typography.trim('heading');
+}

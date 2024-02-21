@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ezeep for ChromeOS - Options</title>
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+   
+    <!-- <script type="text/javascript" src="../js/font-awesome.min.js"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/style.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/app.css">
+</head>
+
+<body>
+
+  <!-- Logged out – start -->
+  <div class="ezp-frame" id="loggedout_content">
+    <header class="ezp-header ezp-header--logged-out">
+      <img class="ezp-header__logo" src="../images/icons/ezeep-icon-24@2x.png">
+      <h1 class="ezp-header__title">
+        <span class="ezp-label ezp-label--primary ezp-label--heavy">ezeep Blue</span>
+      </h1>
+    </header>
+    <main class="ezp-content" id="login_credentials_div">
+      <div class="ezp-content__cover">
+        <h1 class="ezp-content__title">
+          <span class="ezp-heading ezp-heading--secondary ezp-heading--heavy" id="ms_headline">Sign In</span>
+        </h1>
+        <p class="ezp-content__description">
+          <span class="ezp-label ezp-label--primary ezp-label--soft">Please sign in to print from your Chromebook or Chrome browser.</span>
+        </p>
+        <button class="ezp-text-button ezp-text-button--primary" type="submit" name="save_credentials" id="save_credentials">
+          <div class="ezp-text-button__icon ezp-text-button__icon--dynamic" id="loading_icon">
+            <svg class="ezp-spinner" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <circle class="ezp-spinner__track" cx="10" cy="10" r="8" />
+            </svg>
+          </div>
+          <div class="ezp-text-button__text">
+            <span class="ezp-label ezp-label--primary ezp-label--heavy">Sign in</span>
+          </div>
+        </button>
+      </div>
+    </main>
+  </div>
+  <!-- Logged out – end -->
+
+  <!-- Logged in – start -->
+  <div class="ezp-frame" id="loggedin_content">
+    <header class="ezp-header ezp-header--logged-in">
+      <img class="ezp-header__logo" src="../images/icons/ezeep-icon-24@2x.png">
+      <h1 class="ezp-header__title">
+        <span class="ezp-label ezp-label--primary ezp-label--heavy">ezeep Blue</span>
+      </h1>
+      <nav class="ezp-header__links">
+        <a class="ezp-text-link ezp-text-link--main" href="#" id="button_logout">
+          <span class="ezp-label ezp-label--secondary ezp-label--strong">Sign out</span>
+        </a>
+        <a class="ezp-text-link ezp-text-link--main" href="#" id="button_user_portal">
+          <span class="ezp-label ezp-label--secondary ezp-label--strong">User Portal</span>
+        </a>
+      </nav>
+    </header>
+    <main class="ezp-content" id="display_printjobs">
+
+      <!-- No print jobs – start -->
+      <div class="ezp-content__cover" id="no_print_jobs">
+        <h1 class="ezp-content__title">
+          <span class="ezp-heading ezp-heading--secondary ezp-heading--heavy">Let’s print something</span>
+        </h1>
+        <p class="ezp-content__description">
+          <span class="ezp-label ezp-label--primary ezp-label--soft">Print files, documents or websites with Chrome to ezeep-connected printers.</span>
+        </p>
+      </div> 
+      <!-- No print jobs – end -->
+
+      <!-- Print jobs – start -->
+      <div id="display_in_progress_printjob"></div>
+      <div id="display_finished_printjob"></div>
+      <!-- <div class="ezp-list-item" id="display_printjob_status">
+        <div class="ezp-list-item__content">
+          <div class="ezp-list-item__title">
+            <span id="printFilename" class="ezp-label ezp-label--primary ezp-label--soft"></span>
+          </div>
+          <div class="ezp-list-item__meta">
+            <span id="printTimestamp" class="ezp-label ezp-label--secondary ezp-label--soft"></span>
+          </div>
+          <div class="ezp-list-item__meta">
+            <span id="printStatusDescription" class="ezp-label ezp-label--secondary ezp-label--soft"></span>
+          </div>
+          <div class="ezp-progress">
+            <div class="ezp-progress__inner">
+              <div class="ezp-progress__track"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- Static sample print jobs list
+      <div class="ezp-list-item ezp-list-item--status ezp-list-item--failed">
+        <div class="ezp-list-item__content">
+          <div class="ezp-list-item__title">
+            <span class="ezp-label ezp-label--primary ezp-label--soft">Report-Q3.pdf</span>
+          </div>
+          <div class="ezp-list-item__meta">
+            <span class="ezp-label ezp-label--secondary ezp-label--soft">25/09/2021, 09:41 PM</span>
+          </div>
+          <div class="ezp-list-item__meta">
+            <span class="ezp-label ezp-label--secondary ezp-label--soft">Printed on: Lexmark CX510 Series</span>
+          </div>
+        </div>
+        <svg class="ezp-icon">
+          <use xlink:href="#ezp-glyph-check"></use>
+        </svg>
+        
+      </div> -->
+      <!-- <div class="ezp-list-item ezp-list-item--status ezp-list-item--success">
+        <div class="ezp-list-item__content">
+          <div class="ezp-list-item__title">
+            <span class="ezp-label ezp-label--primary ezp-label--soft">IMG_3679.png</span>
+          </div>
+          <div class="ezp-list-item__meta">
+            <span class="ezp-label ezp-label--secondary ezp-label--soft">Yesterday, 08:22 AM</span>
+          </div>
+          <div class="ezp-list-item__meta">
+            <span class="ezp-label ezp-label--secondary ezp-label--soft">Printing failed on: HP DesignJet T120</span>
+          </div>
+        </div>
+        <svg class="ezp-icon">
+          <use xlink:href="#ezp-glyph-exclamation"></use>
+        </svg>
+      </div> -->
+    </main>
+    <footer class="ezp-footer">
+      <div class="ezp-footer__total">
+        <span class="ezp-label ezp-label--secondary ezp-label--soft" id="total_printjobs">5 Printjobs</span>
+      </div>
+      <div class="ezp-footer__action">
+        <span id="clear_printjobs" class="ezp-label ezp-label--secondary ezp-label--strong">Clear</span>
+      </div>
+    </footer>
+    <!-- Print jobs – end -->
+
+  </div>
+  <!-- Logged in – end -->
+
+    <svg class="ezp-glyphs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="ezp-glyph-exclamation" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.8575 1.4855C10.6768 1.1843 10.3513 1 10 1C9.64874 1 9.32323 1.1843 9.14251 1.4855L0.142507 16.4855C-0.0428513 16.7944 -0.0477055 17.1792 0.1298 17.4927C0.307306 17.8062 0.639728 18 1 18H19C19.3603 18 19.6927 17.8062 19.8702 17.4927C20.0477 17.1792 20.0429 16.7944 19.8575 16.4855L10.8575 1.4855ZM9 7C9 6.44772 9.44771 6 10 6C10.5523 6 11 6.44772 11 7V12C11 12.5523 10.5523 13 10 13C9.44771 13 9 12.5523 9 12V7ZM9 15C9 14.4477 9.44771 14 10 14C10.5523 14 11 14.4477 11 15C11 15.5523 10.5523 16 10 16C9.44771 16 9 15.5523 9 15Z" />
+        </symbol>
+        <symbol id="ezp-glyph-check" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM14.7071 7.70711C15.0976 7.31658 15.0976 6.68342 14.7071 6.29289C14.3166 5.90237 13.6834 5.90237 13.2929 6.29289L8.5 11.0858L6.70711 9.29289C6.31658 8.90237 5.68342 8.90237 5.2929 9.29289C4.90237 9.68342 4.90237 10.3166 5.2929 10.7071L7.7929 13.2071L8.5 13.9142L9.20711 13.2071L14.7071 7.70711Z" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <script type="text/javascript" src="../js/options.js"></script>
+    <!--<script type="text/javascript" src="../js/proto.min.js"></script>-->
+
+</body>
+
+</html>

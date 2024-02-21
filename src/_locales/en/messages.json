@@ -1,0 +1,393 @@
+{
+  "appName": {
+
+    "message": "My App",
+    "description": "The title of the application, displayed in the web store."
+
+  },
+  "appDesc": {
+
+    "message": "This app does something awesome.",
+    "description":"The description of the application, displayed in the web store."
+
+  },
+
+  "login": {
+
+    "message": "Welcome to ezeep Blue"
+
+  },
+
+  "logout": {
+
+    "message": "Logout"
+
+  },
+
+  "user_portal": {
+
+    "message": "User Portal"
+
+  },
+
+  "loggedin_username": {
+
+    "message": "Signed in as:"
+
+  },
+
+  "loggedin_credit": {
+
+    "message": "Credit:"
+
+  },
+
+  "loggedin_license": {
+
+    "message": "License:"
+
+  },
+
+  "username_text": {
+
+    "message": "E-Mail-Address"
+
+  },
+
+  "password_text": {
+
+    "message": "Password"
+
+  },
+
+  "ezeep_notification": {
+
+    "message": "Sign in to ezeep"
+
+  },
+
+  "login_credentials_text": {
+
+    "message": "Login credentials"
+
+  },
+
+  "account_details_text": {
+
+    "message": "Account-Informations"
+
+  },
+
+  "manage_profiles_text": {
+
+    "message": "Manage Profiles"
+
+  },
+
+  "add_profile_text": {
+
+    "message": "add profile:"
+
+  },
+
+  "use_profiles_text": {
+
+    "message": "use profiles"
+
+  },
+
+  "userid_td_text": {
+
+    "message": "User ID"
+
+  },
+
+  "username_td_text": {
+
+    "message": "Username"
+
+  },
+
+  "license_valid_td_text": {
+
+    "message": "License"
+
+  },
+
+  "license_left_td_text": {
+
+    "message": "Days left"
+
+  },
+
+  "license_trial_td_text": {
+
+    "message": "Licensetype"
+
+  },
+
+  "value_valid": {
+
+    "message": "valid"
+
+  },
+
+  "value_invalid": {
+
+    "message": "invalid"
+
+  },
+
+  "license_trial": {
+
+    "message": "triallicense"
+
+  },
+
+  "license_full": {
+
+    "message": "fulllicense"
+
+  },
+
+  "forgot_password_text": {
+
+    "message": "Forgot password?"
+
+  },
+
+  "notification_title_error_general": {
+
+    "message": "Error"
+
+  },
+
+  "notification_message_error_login": {
+
+    "message": "Invalid Credentials"
+
+  },
+
+  "notification_title_loggedin": {
+
+    "message": "Logged in"
+
+  },
+
+  "notification_message_loggedin": {
+
+    "message": "Login Successful"
+
+  },
+
+  "notification_title_loggedout": {
+
+    "message": "Logged out"
+
+  },
+
+  "notification_message_loggedout": {
+
+    "message": "Logout successful"
+
+  },
+
+  "notification_message_general_error": {
+
+    "message": "An error occured."
+
+  },
+
+  "notification_title_general_error": {
+
+    "message": "Error"
+
+  },
+
+  "notification_message_not_enough_amount": {
+
+    "message": "Not enough amount."
+
+  },
+
+  "notification_title_not_enough_amount": {
+
+    "message": "your amount is to low"
+
+  },
+
+  "notification_title_no_printers_found": {
+
+    "message": "No Printers found."
+
+  },
+
+  "notification_message_no_printers_found": {
+
+    "message": "We could not find any printers, are they switched on?"
+
+  },
+
+  "notification_title_no_printer_properties_found": {
+
+    "message": "No Printer Properties found."
+
+  },
+
+  "notification_message_no_printer_properties_found": {
+
+    "message": "We could not find any printer properties."
+
+  },
+
+  "notification_title_invalid_license": {
+
+    "message": "Invalid License."
+
+  },
+
+  "notification_message_invalid_license": {
+
+    "message": "Your license is not valid, you can't print right now."
+
+  },
+
+  "notification_message_quotaprint": {
+
+    "message": "Print with quota"
+
+  },
+
+  "notification_title_quotaprint": {
+
+    "message": "Quotaprint"
+
+  },
+
+  "notification_quota": {
+
+    "message": "Quota"
+
+  },
+
+  "notification_quota_used": {
+
+    "message": "Quota used"
+
+  },
+
+  "notification_quota_left": {
+
+    "message": "Quota left"
+
+  },
+
+  "notification_pages": {
+
+    "message": "Pages"
+
+  },
+
+  "notification_page": {
+
+    "message": "Page"
+
+  },
+
+  "notification_credits_used": {
+
+    "message": "Credits used"
+
+  },
+
+  "notification_credits_left": {
+
+    "message": "Credits left"
+
+  },
+
+  "notification_title_quotaprint_with_amount": {
+
+    "message": "Quotaprint + amount"
+
+  },
+
+  "notification_message_quotaprint_with_amount": {
+
+    "message": "Quota used up and used amount"
+
+  },
+
+  "notification_title_creditprint": {
+
+    "message": "Credit print"
+
+  },
+
+  "notification_message_creditprint": {
+
+    "message": "Print uses your credits"
+
+  },
+
+  "notification_message_job_sent": {
+
+    "message": "Job sent to printer."
+
+  },
+
+  "notification_title_job_sent": {
+
+    "message": "Job sent"
+
+  },
+
+  "notification_message_quota_exceeded": {
+
+    "message": "Your quota is exceeded"
+
+  },
+
+  "notification_title_quota_exceeded": {
+
+    "message": "Quota exceeded,"
+
+  },
+
+  "text_printer_list_name": {
+
+    "message": "Name"
+
+  },
+
+  "text_printer_list_scheme": {
+
+    "message": "Scheme"
+
+  },
+
+  "text_printer_list_price": {
+
+    "message": "Price"
+
+  },
+
+  "text_printer_list_quota": {
+
+    "message": "Quota"
+
+  },
+
+  "text_printer_list_myprinters": {
+
+    "message": "My Printers"
+
+  },
+
+  "no_printers": {
+
+    "message": "There are currently no printers available"
+
+  }
+
+}

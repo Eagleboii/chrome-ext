@@ -1,0 +1,254 @@
+#ezeep_note {
+
+    font-family: 'source_sans_proregular','Helvetica Neue',Arial,Helvetica,Geneva,sans-serif;
+    font-weight: normal;
+    color: #116982;
+    font-size: 20px;
+
+}
+
+#save_credentials {
+
+    background-color: #91b155;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 200px;
+
+}
+
+#uname {
+
+    width: 200px;
+
+}
+
+#upass {
+
+    width: 200px;
+
+}
+
+#icon_uname {
+
+    background-image: url(../images/uname.svg);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    padding: 0px;
+    margin: 0;
+
+}
+
+#icon_upass {
+
+    background-image: url(../images/pass.svg);
+
+}
+
+#loggedout_content {
+
+    width: 300px;
+
+}
+
+#login_logo {
+
+    margin: 0 auto;
+    height: 80px;
+    width: 300px;
+
+}
+
+#logo {
+
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+
+
+}
+
+#ezeep_note {
+
+    text-align: center;
+
+}
+
+#login_credentials_div {
+
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+#menu {
+
+    width: 350px;
+    background-color: #ACCEF7;
+
+}
+
+#forgot_password_text:link {
+
+    text-decoration: none;
+    color: #b1b5b7;
+
+}
+
+#forgot_password_text:visited {
+
+    text-decoration: none;
+    color: #b1b5b7;
+
+}
+
+#forgot_password_text:active {
+
+    text-decoration: none;
+    color: #b1b5b7;
+
+}
+
+#forgot_password_text:hover {
+
+    text-decoration: none;
+    color: #c2526b;
+
+}
+
+#option_header {
+
+    background-position: center bottom;
+    height: 70px;
+    background: url("../images/ezeeplogo_small.svg") center center no-repeat;
+    padding: 5px;
+
+}
+
+#loggedin_content {
+
+    background-color: #e7f0f2;
+    color: #1583a2;
+
+}
+
+.menu-icon {
+
+    float: right;
+    fill: #1583a2;
+    padding-right: 5px;
+
+}
+
+#button_logout:visited {
+
+    text-decoration: underline;
+    color: #1583a2;
+
+}
+
+#button_logout:link {
+
+    text-decoration: underline;
+    color: #1583a2;
+
+}
+
+#button_logout:hover {
+
+    text-decoration: underline;
+    color: #1583a2;
+
+}
+
+#button_logout:active {
+
+    text-decoration: underline;
+    color: #1583a2;
+
+
+}
+
+#button_logout_div {
+
+    padding: 12px;
+
+}
+
+#loggedin_username {
+
+    padding: 12px
+
+}
+
+#loggedin_credit {
+
+    padding: 12px;
+
+}
+
+#loggedin_license {
+
+    padding: 12px;
+
+}
+
+#my_printers_list {
+
+    padding: 12px;
+
+}
+
+#printerslist {
+
+    padding: 12px;
+
+}
+
+#myprinters_open_link:link {
+    text-decoration: underline;
+    color: #1583a2;
+}
+
+#myprinters_open_link:hover {
+    text-decoration: underline;
+    color: #1583a2;
+}
+
+#myprinters_open_link:active {
+    text-decoration: underline;
+    color: #1583a2;
+}
+
+#myprinters_open_link:visited {
+    text-decoration: underline;
+    color: #1583a2;
+}
+
+.menu_item:hover {
+
+    background-color: #DDEFF3;
+
+}
+
+.fa-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+}

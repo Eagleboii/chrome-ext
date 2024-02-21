@@ -1,0 +1,118 @@
+variables:
+  # GIT_SUBMODULE_STRATEGY: recursive
+  GIT_STRATEGY: clone
+  # CI_DEBUG_TRACE: "true"
+  EXTENSION_ID: "cjmopihpekddjpbjpoejdaeoipndhkgd"
+    
+stages:
+  - prebuild
+  - build
+  - deploy
+  - deploy-chrome
+
+prebuild:getversion:
+  image: 
+    name: ctd-sv01.thinprint.de:5000/mkversio:3.2.19
+    entrypoint: [ '' ]
+  variables:
+    GIT_STRATEGY: clone
+    IsServerBuild: 1 
+  stage: prebuild
+  allow_failure: false
+  script:
+      - "[ \"$(git rev-parse remotes/origin/$CI_BUILD_REF_NAME)\" != \"$CI_BUILD_REF\" ] || git checkout $CI_BUILD_REF_NAME" 
+      - mono /usr/bin/mkversiov3/mkversiov3.exe pom.xml src/manifest.json -c "ThinPrint GmbH" -vf relversion_file.txt -vp relversion_prod.txt
+      - mv manifest.json src # workaround for older mkversio bug
+  artifacts:
+    paths:
+      - pom.xml
+      - relversion*.txt
+      - src/manifest.json
+  except:
+    refs:
+      - tags
+  only:
+    refs:
+      - /^release\/.*$/
+      - /^support\/.*$/
+      - /^hotfix\/.*$/
+  except:
+    variables:
+      - $ACTION != null
+
+build:build:
+  image: node
+  stage: build  
+  script:
+    - yarn
+    - mkdir -p build/tst; mkdir -p build/release
+    - cp -r ./src/* build/tst
+    - cp -r ./src/* build/release
+    - pushd build/release/js
+    - ../../../node_modules/uglify-js/bin/uglifyjs background.js > background1.js
+    - mv background1.js background.js
+    - ../../../node_modules/uglify-js/bin/uglifyjs options.js > options1.js
+    - mv options1.js options.js
+    - popd
+    - node deploy.js
+  dependencies:
+    - prebuild:getversion
+  artifacts:
+    paths:
+      - pom.xml
+      - relversion*.txt
+      - release.zip
+      - build/
+  except:
+    refs:
+      - tags
+  only:
+    refs:
+      - /^release\/.*$/
+      - /^support\/.*$/
+      - /^hotfix\/.*$/
+  except:
+    variables:
+      - $ACTION != null
+
+deploy:maven:
+  image: ctd-sv01.thinprint.de:5000/maven:latest  
+  stage: deploy
+  script:
+    - mvn --settings .m2/settings.xml -f pom.xml deploy
+    # tag revision
+    - "curl --request POST --header \"PRIVATE-TOKEN: $GITLAB_API_TOKEN\" \"$CI_API_V4_URL/projects/$CI_PROJECT_ID/repository/tags?tag_name=Build-$(cat relversion_prod.txt)&ref=$CI_COMMIT_SHA\""
+  dependencies:
+    - build:build
+  artifacts:
+    paths:      
+      - target/*
+      - release.zip
+      - relversion_prod.txt
+  except:
+    refs:
+      - tags
+  only:
+    refs:
+      - /^release\/.*$/
+      - /^support\/.*$/
+      - /^hotfix\/.*$/
+
+deployExtension:
+  image: node
+  stage: deploy-chrome
+  script:
+    - yarn
+    - ./node_modules/.bin/webstore upload --source release.zip --extension-id $EXTENSION_ID --client-id $CHROME_WEBUPLOAD_CLIENTID --client-secret $CHROME_WEBUPLOAD_CLIENTSECRET --refresh-token $CHROME_WEBUPLOAD_REFRESHTOKEN
+  when: manual
+  dependencies:
+    - deploy:maven
+  except:
+    refs:
+      - tags
+  only:
+    refs:
+      - /^release\/.*$/
+      - /^support\/.*$/
+      - /^hotfix\/.*$/
+

@@ -1,0 +1,51 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './../library/typography.m' as typography;
+@use './label.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-label {
+  display: block;
+  font-size: var(--ezp-label-font-size);
+  font-weight: var(--ezp-label-font-weight);
+  letter-spacing: var(--ezp-label-letter-spacing);
+  line-height: var(--ezp-label-line-height);
+  margin: 0;
+
+  &--primary {
+    --ezp-label-font-size: 13px;
+    --ezp-label-line-height: 20px;
+    --ezp-label-letter-spacing: -0.003em;
+    --ezp-label-offset: 5px;
+  }
+
+  &--secondary {
+    --ezp-label-font-size: 11px;
+    --ezp-label-line-height: 18px;
+    --ezp-label-letter-spacing: 0.005em;
+    --ezp-label-offset: 5px;
+  }
+
+  &--soft {
+    --ezp-label-font-weight: 400;
+  }
+
+  &--strong {
+    --ezp-label-font-weight: 500;
+  }
+
+  &--heavy {
+    --ezp-label-font-weight: 600;
+  }
+
+  @include typography.trim('label');
+}

@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "name": "ezeep Blue",
+    "version": "2.0.33",
+    "default_locale": "en",
+    "description": "Extension to print from your Chromebook or Chrome browser with your ezeep Blue account",
+    "icons": { 
+        "16": "images/icons/ezeep-icon-16@2x.png",
+        "48": "images/icons/ezeep-icon-24@2x.png",
+       "128": "images/icons/ezeep-icon-24@2x.png" 
+    },
+    "browser_action": {
+        "default_icon": "images/icons/ezeep-icon-16@2x.png",
+        "default_popup": "html/options.html"
+    },
+    
+    "options_page": "html/options.html",
+    
+    "permissions": [
+        "identity",
+        "printerProvider",
+        "storage",
+        "notifications",
+        "http://*/*",
+        "https://*/*"
+    ],
+
+    "background": {
+        "scripts": [
+            "js/lib/jquery.js",
+            "js/background.js"
+        ],
+        "persisten": false
+    },
+
+    "web_accessible_resources": [
+        "js/lib/*",
+        "data/*.json"
+    ]
+}

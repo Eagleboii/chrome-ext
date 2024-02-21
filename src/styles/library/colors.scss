@@ -1,0 +1,31 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use 'sass:map';
+@use './media.m' as media;
+@use './colors.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+:root {
+  @each $name, $levels in map.get(self.$levels, 'light') {
+    @each $level, $color in $levels {
+      @include self.declareSwatch($name, $level, $color);
+    }
+  }
+
+  @include media.dark {
+    @each $name, $levels in map.get(self.$levels, 'dark') {
+      @each $level, $color in $levels {
+        @include self.declareSwatch($name, $level, $color);
+      }
+    }
+  }
+}

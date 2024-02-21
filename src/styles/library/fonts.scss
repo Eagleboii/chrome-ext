@@ -1,0 +1,20 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './fonts.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  src: url('./../../fonts/Inter.var.woff2') format('woff2');
+}

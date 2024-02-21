@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "main": "deploy.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "mix",
+    "start": "mix watch",
+    "prod": "mix --production",
+    "stylelint": "stylelint \"src/styles/**/*.scss\" --fix"
+  },
+  "dependencies": {
+    "js-obfuscator": "^0.1.4",
+    "uglify-js": "^3.13.4",
+    "zip-folder": "^1.0.0"
+  },
+  "devDependencies": {
+    "chrome-webstore-upload": "^0.4.4",
+    "chrome-webstore-upload-cli": "^1.2.1",
+    "laravel-mix": "^6.0.31",
+    "postcss": "^8.3.1",
+    "prettier": "^2.4.1",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-prettier"
+    ],
+    "plugins": [
+      "stylelint-prettier",
+      "stylelint-order"
+    ],
+    "rules": {
+      "prettier/prettier": true,
+      "order/order": [
+        "dollar-variables",
+        "custom-properties",
+        "declarations",
+        "rules",
+        "at-rules"
+      ],
+      "order/properties-alphabetical-order": true
+    }
+  }
+}

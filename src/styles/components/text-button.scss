@@ -1,0 +1,93 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './../library/media.m' as media;
+@use './text-button.m' as self;
+
+.ezp-text-button {
+  --ezp-text-button-background-active: transparent;
+  --ezp-text-button-background-disabled: transparent;
+  --ezp-text-button-background-hover: transparent;
+  --ezp-text-button-background-init: transparent;
+  --ezp-text-button-background: var(--ezp-text-button-background-init);
+  --ezp-text-button-color-disabled: inherit;
+  --ezp-text-button-color-init: inherit;
+  --ezp-text-button-color: var(--ezp-text-button-color-init);
+  --ezp-text-button-cursor: pointer;
+  align-items: center;
+
+  appearance: none;
+  background: var(--ezp-text-button-background);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  color: var(--ezp-text-button-color);
+  cursor: var(--ezp-text-button-cursor);
+  display: grid;
+  display: flex;
+  font-family: inherit;
+  grid-template: auto / auto;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:not(:disabled) {
+    @include media.hover {
+      &:hover {
+        --ezp-text-button-background: var(--ezp-text-button-background-hover);
+      }
+
+      &:active {
+        --ezp-text-button-background: var(--ezp-text-button-background-active);
+      }
+    }
+  }
+
+  &:disabled {
+    --ezp-text-button-background: var(--ezp-text-button-background-disabled);
+    --ezp-text-button-color: var(--ezp-text-button-color-disabled);
+    --ezp-text-button-cursor: default;
+  }
+
+  &--primary {
+    --ezp-text-button-background-active: var(--ezp-color-main-tertiary);
+    --ezp-text-button-background-disabled: var(--ezp-color-shade-primary);
+    --ezp-text-button-background-hover: var(--ezp-color-main-secondary);
+    --ezp-text-button-background-init: var(--ezp-color-main-primary);
+    --ezp-text-button-color-disabled: var(--ezp-color-foreground-tertiary);
+    --ezp-text-button-color-init: var(--ezp-color-on-main-primary);
+  }
+
+  &--secondary {
+    --ezp-text-button-background-active: var(--ezp-color-shade-tertiary);
+    --ezp-text-button-background-disabled: var(--ezp-color-shade-primary);
+    --ezp-text-button-background-hover: var(--ezp-color-shade-secondary);
+    --ezp-text-button-background-init: var(--ezp-color-shade-primary);
+    --ezp-text-button-color-disabled: var(--ezp-color-foreground-tertiary);
+    --ezp-text-button-color-init: var(--ezp-color-foreground-secondary);
+  }
+
+  &--tertiary {
+    --ezp-text-button-background-active: var(--ezp-color-shade-secondary);
+    --ezp-text-button-background-hover: var(--ezp-color-shade-primary);
+    --ezp-text-button-color-disabled: var(--ezp-color-foreground-tertiary);
+    --ezp-text-button-color-init: var(--ezp-color-foreground-primary);
+  }
+
+  &__icon {
+    margin: 0 0 0 var(--ezp-layout-spacing-2);
+
+    &--dynamic {
+      display: none;
+    }
+  }
+
+  &__text {
+    padding: var(--ezp-layout-spacing-3);
+  }
+}

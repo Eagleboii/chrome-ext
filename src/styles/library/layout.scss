@@ -1,0 +1,23 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use 'sass:list';
+@use './layout.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+:root {
+  @each $spacing in self.$spacings {
+    @include self.declareSpacing(
+      list.index(self.$spacings, $spacing),
+      $spacing
+    );
+  }
+}

@@ -1,0 +1,48 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './list-item.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-list-item {
+  --ezp-icon-fill: var(--ezp-list-item-icon-fill);
+  align-items: center;
+
+  box-shadow: 0 1px 0 0 var(--ezp-color-outline-primary);
+  display: grid;
+  grid-template: var(--ezp-list-item-grid-template, auto);
+  padding: var(--ezp-layout-spacing-4);
+
+  &--status {
+    --ezp-list-item-grid-template: auto / 1fr auto;
+  }
+
+  &--failed {
+    --ezp-list-item-icon-fill: var(--ezp-color-red-primary);
+  }
+
+  &--success {
+    --ezp-list-item-icon-fill: var(--ezp-color-green-primary);
+  }
+
+  &__content {
+    display: grid;
+    gap: var(--ezp-layout-spacing-2);
+  }
+
+  &__title {
+    color: var(--ezp-color-foreground-primary);
+  }
+
+  &__meta {
+    color: var(--ezp-color-foreground-secondary);
+  }
+}

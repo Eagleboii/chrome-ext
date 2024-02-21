@@ -1,0 +1,34 @@
+/**
+ *
+ * Modules
+ *
+ */
+
+@use './../library/media.m' as media;
+@use './footer.m' as self;
+
+/**
+ *
+ * Rules
+ *
+ */
+
+.ezp-footer {
+  background: var(--ezp-color-surface-secondary);
+  color: var(--ezp-color-foreground-secondary);
+  display: grid;
+  grid-template: auto / repeat(2, auto);
+  justify-content: space-between;
+  padding: var(--ezp-layout-spacing-2) var(--ezp-layout-spacing-4);
+
+  &__action {
+    color: var(--ezp-footer-action-color, inherit);
+    cursor: pointer;
+
+    @include media.hover {
+      &:hover {
+        --ezp-footer-action-color: var(--ezp-color-foreground-primary);
+      }
+    }
+  }
+}
